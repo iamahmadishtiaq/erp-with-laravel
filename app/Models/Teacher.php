@@ -10,7 +10,7 @@ class Teacher extends Authenticatable
     use HasApiTokens;
 
     protected $fillable = [
-        'name', 'father_name', 'phone_number', 'email', 'address', 'subject', 'class', 'profile_pic', 'password'
+        'name', 'father_name', 'phone_number', 'email', 'address', 'subject', 'class', 'password', 'profile_pic'
     ];
     protected $hidden = ['password', 'remember_token'];
 }
