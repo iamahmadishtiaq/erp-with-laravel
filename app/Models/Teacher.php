@@ -2,15 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class Teacher extends Authenticatable
+class Teacher extends Model
 {
-    use HasApiTokens;
-
-    protected $fillable = [
-        'name', 'father_name', 'phone_number', 'email', 'address', 'subject', 'class', 'password', 'profile_pic'
-    ];
-    protected $hidden = ['password', 'remember_token'];
+    protected $fillable = ['name', 'father_name', 'phone_number', 'email', 'address', 'class', 'subjects', 'password', 'profile_pic'];
+    protected $casts = ['subjects' => 'array'];
 }
